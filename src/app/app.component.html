@@ -1,2 +1,11 @@
 <hello name="{{ name }}"></hello>
 <p>Start editing to see some magic happen :)</p>
+<div ng-container *ngIf="contract$ | async as response">
+<div class="card">
+    <div class="card-header">
+        <code>
+                <pre>{{response |json}}</pre>
+            </code>
+    </div>
+</div>
+</div>
