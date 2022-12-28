@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   contract$: any;
 
   ngOnInit() {
-    this.contract$ = from(this.contractData.result.data); // assume I am using http service here. and it is sending me the response json like contractData.
+    this.contract$ = of(this.contractData.result.data); // assume I am using http service here. and it is sending me the response json like contractData.
     of(1, 2, 4, 6, 8, 10).subscribe((nos) => console.log(nos));
     //const data$ = of([{'attr1': 'test', 'total' : 500}, {'attr1': 'test', 'total' : 500}]);
     const data$ = from([
